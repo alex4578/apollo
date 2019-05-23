@@ -11,18 +11,18 @@ GraphQL has the potential to create incredible developer experiences, thanks to 
 
 The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) for Apollo brings an all-in-one tooling experience for developing apps with Apollo.
 
-- Add [syntax highlighting](#syntax) for GraphQL files and gql templates inside JavaScript files
-- Get instant feedback and [intelligent autocomplete](#autocomplete) for fields, arguments, types, and variables as you write queries
+- Add [syntax highlighting](#syntax-highlighting) for GraphQL files and gql templates inside JavaScript files
+- Get instant feedback and [intelligent autocomplete](#intelligent-autocomplete) for fields, arguments, types, and variables as you write queries
 - Seamlessly manage your client side schema alongside your remote one
 - [See performance information](#performance-insights) inline with your query definitions
 - Validate field and argument usage in operations
 - [Navigate projects](#navigating-projects) easier with jump-to and peek-at definitions and more
 - Manage [client-only](#client-only-schemas) schemas
-- [Switch schema tags](#commands) to work on upcoming features
+- [Switch schema tags](#schema-tag-switching) to work on upcoming features
 
 ## Getting started
 
-To get all of the benefits of the VS Code experience, it's best to link the schema that is being developed against **before** installing the extension. The best way to do that is by [publishing a schema](/platform/schema-registry/#publish) to the Apollo schema registry. Once that is done, two steps are needed:
+To get all of the benefits of the VS Code experience, it's best to link the schema that is being developed against **before** installing the extension. The best way to do that is by [publishing a schema](/platform/schema-registry/#registering-a-schema) to the Apollo schema registry. Once that is done, two steps are needed:
 
 1. Create an `apollo.config.js` at the root of the project
 2. Copy an API key from the Engine dashboard of the published service

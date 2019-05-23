@@ -3,7 +3,7 @@ title: Working with traces
 description: How to analyze field-level metrics with Apollo
 ---
 
-Engine tracks all queries that clients send to your GraphQL API. We often prefer to call these "operations", a term that includes both GraphQL queries and mutations. The execution timing of individual operations and fields is always aggregated into statistics that are sent to Engine (see [performance analytics](/references/setup-analytics) for more information), and sometimes additional detail is included.
+Engine tracks all queries that clients send to your GraphQL API. We often prefer to call these "operations", a term that includes both GraphQL queries and mutations. The execution timing of individual operations and fields is always aggregated into statistics that are sent to Engine (see [performance analytics](/references/setup-analytics/) for more information), and sometimes additional detail is included.
 
 ## Resolver execution
 

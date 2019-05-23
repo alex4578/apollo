@@ -15,7 +15,7 @@ GraphQL is a language for querying data. With GraphQL, your existing services de
 
 #### Why use GraphQL?
 
-GraphQL can make a difference in nearly every area of development: from improving developer experience with quality tooling to improving client performance by reducing bundle sizes. Read more about the benefits of GraphQL [here](../fundamentals/benefits.html).
+GraphQL can make a difference in nearly every area of development: from improving developer experience with quality tooling to improving client performance by reducing bundle sizes. Read more about the benefits of GraphQL [here](/intro/benefits/).
 
 #### Where can I learn GraphQL?
 
@@ -48,7 +48,7 @@ For Apollo Client projects, there are also many view-layer integrations, to make
 
 #### Should I use Node.js for schema development?
 
-There are GraphQL server tools available for most popular languages, but it is recommended to use [apollo-server](https://www.apollographql.com/server), which is built on top of Node.js. Using a node.js server is beneficial, because of its ability to be run nearly anywhere (including the edge), and the wide knowledge of Node.js across development teams. Read more about why Node.js is recommended [here](../fundamentals/tips.html#javascript).
+There are GraphQL server tools available for most popular languages, but it is recommended to use [apollo-server](https://www.apollographql.com/server), which is built on top of Node.js. Using a node.js server is beneficial, because of its ability to be run nearly anywhere (including the edge), and the wide knowledge of Node.js across development teams.
 
 #### How do I wrap existing APIs?
 
@@ -60,7 +60,7 @@ Other DataSources are under development, but even without the `DataSource` API, 
 
 #### How do I design the schema?
 
-Schemas should be designed with the needs of the client in mind. Rather than modeling queries and types after the underlying services, they should be designed to make querying as easy as possible. GraphQL's resolver structure makes it possible to allow this flexibility without many performance consequences. For more, read the [schema design guide](../guides/schema-design.html).
+Schemas should be designed with the needs of the client in mind. Rather than modeling queries and types after the underlying services, they should be designed to make querying as easy as possible. GraphQL's resolver structure makes it possible to allow this flexibility without many performance consequences. For more, read the [schema design guide](/tutorial/schema/).
 
 #### How do I discover and reproduce errors?
 
@@ -76,15 +76,15 @@ For errors not prevented by the type system, it's helpful to know what exact que
 
 #### How should the transition to GraphQL happen?
 
-As with any large change, the adoption of GraphQL should be incremental. GraphQL allows teams to leave existing services as they are and build convenient gateways on top of them. Read more about incremental adoption of GraphQL in the [tips for success](../fundamentals/tips.html#incremental-adoption).
+As with any large change, the adoption of GraphQL should be incremental. GraphQL allows teams to leave existing services as they are and build convenient gateways on top of them. Read more about incremental adoption of GraphQL in the [Principled GraphQL](https://principledgraphql.com/agility#5-use-an-agile-approach-to-schema-development).
 
 #### Who owns the schema design?
 
-GraphQL schemas work best when their design is heavily influenced by the needs of the product developers. It's tempting to design a schema to resemble the underlying sources or databases, but this can be hurtful to the usefulness of GraphQL. Read more about schema ownership in the [tips for success](../fundamentals/tips.html#schema).
+GraphQL schemas work best when their design is heavily influenced by the needs of the product developers. It's tempting to design a schema to resemble the underlying sources or databases, but this can be hurtful to the usefulness of GraphQL. Read more about schema ownership in [Principled GraphQL](https://principledgraphql.com/integrity#1-one-graph).
 
 #### How do I set up authentication/authorization for my GraphQL schema?
 
-Authentication and authorization are important topics to discuss with any API. GraphQL provides a very granular approach to handling these topics. But don't worry! If an API being consumed by GraphQL already has authorization built-in, it may be possible to ignore it completely! Read more in the [access control guide](../guides/access-control.html).
+Authentication and authorization are important topics to discuss with any API. GraphQL provides a very granular approach to handling these topics. But don't worry! If an API being consumed by GraphQL already has authorization built-in, it may be possible to ignore it completely! Read more in the [access control guide](/tutorial/resolvers/#authenticate-users).
 
 #### How can I secure my schema from malicious or expensive queries?
 
@@ -122,10 +122,10 @@ Keeping all schema code together makes sense for smaller projects, but once a pr
 
 #### How can I test my client?
 
-`react-apollo` comes with everything needed to test a client app that makes queries to a GraphQL schema. Read the [Testing React Components](/docs/react/recipes/testing) guide to learn more.
+`react-apollo` comes with everything needed to test a client app that makes queries to a GraphQL schema. Read the [Testing React Components](https://www.apollographql.com/docs/react/recipes/testing/) guide to learn more.
 
 #### How can I safely make changes to the schema?
 
-Schemas naturally evolve over time. GraphQL schemas are more resilient to change than other APIs, but there are still occasions where breaking changes will need to happen to support new functionality. The [versioning guide](../guides/versioning.html) explains in more detail what kinds of changes are safe to make, and what kinds could break existing clients.
+Schemas naturally evolve over time. GraphQL schemas are more resilient to change than other APIs, but there are still occasions where breaking changes will need to happen to support new functionality. The [versioning guide](/platform/schema-registry/#registering-a-schema) explains in more detail what kinds of changes are safe to make, and what kinds could break existing clients.
 
 Additionally, using the [Apollo CLI](https://www.npmjs.com/package/apollo) with Apollo Engine provides the tools needed to [validate schema changes](https://www.apollographql.com/docs/engine/features/schema-history.html) over time. This makes collaboration easier and more transparent.

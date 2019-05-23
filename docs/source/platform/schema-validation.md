@@ -17,7 +17,7 @@ Here's how it works:
 
 1. You run `apollo service:check` locally or in CI. The proposed schema is sent to Engine's schema registry.
 1. Engine creates a diff between the local schema and the most recently published schema in the registry.
-1. Engine fetches a list of all operations sent to your service in your plan's maximum time window (time window is [configurable](#cli-advanced)).
+1. Engine fetches a list of all operations sent to your service in your plan's maximum time window (time window is [configurable](#adjusting-validation-parameters)).
 1. Engine walks through the schema diff change-by-change and compares against the operation list to see if the changes will affect the behavior of any operations.
 1. Engine will return the schema diff and indicate any breaking changes found.
 1. The CLI will print the output of this check with a link to _view more details in the Engine UI_.
@@ -121,7 +121,7 @@ Since breaking changes are detected using live traffic, **your service will need
 
 Running a schema validation check is as simple as running `apollo service:check` on the command line from within a service repository that has been configured to be an Apollo project.
 
-> **Note:** [Skip to the setup section](#setup) for details on how to configure your project for schema change validation.
+> **Note:** [Skip to the setup section](#set-up-schema-validation) for details on how to configure your project for schema change validation.
 
 Running the `apollo service:check` command will output the diff of all schema changes found and highlight changes determined to be breaking as `FAILURE`. Here's an example:
 
@@ -152,7 +152,7 @@ If there are any changes to the schema, `FAILURE` or `NOTICE`, a URL to Engine w
 
 The Service Check page in Engine will have full details on the changes in the diff and which clients are affected by the changes, if any.
 
-> **Note:** If you [set up your checks on GitHub](#github), the "Details" link in your checks will take you to this special URL as well.
+> **Note:** If you [set up your checks on GitHub](#github-integration), the "Details" link in your checks will take you to this special URL as well.
 
 ## Set up schema validation
 
@@ -173,7 +173,7 @@ $ npm install apollo
 $ npx apollo service:check
 ```
 
-The command can be placed in any continuous integration pipeline. To surface results, `apollo` emits an exit code and [integrates with GitHub statuses](#github). The check command validates against traffic from the past day by default, but this time window can be [configured](#cli-advanced) to be a longer range.
+The command can be placed in any continuous integration pipeline. To surface results, `apollo` emits an exit code and [integrates with GitHub statuses](#github-integration). The check command validates against traffic from the past day by default, but this time window can be [configured](#adjusting-validation-parameters) to be a longer range.
 
 > **Note:** The Apollo CLI will be looking in your Apollo config for a location from which to fetch your local schema and using your ENGINE_API_KEY to authenticate its requests with the Engine service.
 

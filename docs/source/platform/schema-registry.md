@@ -175,6 +175,6 @@ const server = new ApolloServer({
 An up-to-date schema in Apollo's schema registry enables a number of workflow benefits through integrations with other tools. A registered schema combined with:
 
 - The [Apollo VS Code extension](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) provides built-in linting on queries by validating against the schema in your registry, and annotates fields on your queries with performance indicators collected in Apollo's trace warehouse.
-- [Schema validation](/platform/schema-validation) creates a diff between your local schema and the last schema pushed to the registry, and validates this diff against live traffic seen on your endpoint to make sure you never accidentally deploy a breaking schema change to production.
+- [Schema validation](/platform/schema-validation/) creates a diff between your local schema and the last schema pushed to the registry, and validates this diff against live traffic seen on your endpoint to make sure you never accidentally deploy a breaking schema change to production.
 - The [Schema History](#viewing-schema-change-history) keeps track of all the changes made to your schema over time.
 - The [Schema Explorer](https://engine.apollographql.com) links the fields in your schema to clients and queries that are using them.
